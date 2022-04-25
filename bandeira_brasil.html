@@ -1,0 +1,33 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//Desenhando retângulo verde do tamanho do Canvas
+	pincel.fillStyle = 'green';
+	pincel.fillRect(0,0,600,400);
+
+	//Losango nada mais é que 2 triângulos: desenhando o superior
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	pincel.moveTo(50,200);
+	pincel.lineTo(600-50,200);
+	pincel.lineTo(600/2,50);
+	pincel.fill();
+
+	//Desenhando o triângulo inferior
+	pincel.beginPath();
+	pincel.moveTo(50,200);
+	pincel.lineTo(600-50,200);
+	pincel.lineTo(600/2,400-50);
+	pincel.fill();
+
+	//Desenhando círculo da bandeira
+	pincel.fillStyle = 'darkblue';
+	pincel.beginPath();
+	pincel.arc(300,200,100,0,2*3.14);
+	pincel.fill();
+
+</script>
