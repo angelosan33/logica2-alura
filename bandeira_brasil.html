@@ -27,7 +27,25 @@
 	//Desenhando círculo da bandeira
 	pincel.fillStyle = 'darkblue';
 	pincel.beginPath();
-	pincel.arc(300,200,100,0,2*3.14);
+
+	//Sintaxe: void ctx.arc(x, y, raio, anguloInicial, anguloFinal [, antiHorario]);
+
+	pincel.arc(300,200,100,0,2*Math.PI); // 2*Math.PI == 2*3.14
+
+	/*Explicando os Parametros de ARC:
+	-x:
+	A coordenada horizontal do centro do arco.
+	-y:
+	A coordenada vertical do centro do arco.
+	-raio:
+	O raio do arco. Deve ser um valor positivo.
+	-anguloInicial:
+	O ângulo em radianos em que o arco começa medido a partir do eixo x positivo.
+	-anguloFinal:
+	O ângulo em que o arco finaliza medido a partir do eixo x positivo.
+	-antiHorario: (Optional)
+	Um Boolean opcional. Se verdadeiro, desenha o arco no sentido anti-horário entre os ângulos inicial e final. O padrão é falso (sentido horário).
+	*/
 	pincel.fill();
 
 </script>
