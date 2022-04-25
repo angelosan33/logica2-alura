@@ -13,9 +13,25 @@
 		pincel.strokeRect(x,y,50,50);
 
 	}
+	/* Usando FOR
+	for (var x = 0; x < 600; x=x+50){
+		for (var y = 0; y < 400; y = y+50){
+			desenhaQuadradoVerde(x,y,'green');
+		}
+		
+	
+	}
+	*/
 
-	desenhaQuadradoVerde(0,0,'green');
-	desenhaQuadradoVerde(50,0,'green');
-	desenhaQuadradoVerde(100,0,'green');
+	//Usando While:
+
+	var x = 0;
+	
+	while(x < 600){
+		desenhaQuadradoVerde(x,0,'green');
+		x = x + 50;
+		
+	}
+	
 
 </script>
